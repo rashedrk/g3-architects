@@ -1,0 +1,171 @@
+/*--------------- 
+Custom variables 
+----------------*/
+:root{
+    --bg_01:rgba(255, 144, 14, 0.1);
+    --bg_02:#FFF4E7;
+    --Dark_01:#131313;
+    --Dark_02:#424242;
+    --Dark_03:#727272;
+    --orange:#FF900E;
+    --white:#FFFFFF;
+}
+/*----- 
+fonts 
+------*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+/*---------
+Utilities
+----------*/
+*{
+    font-family: 'Work Sans', sans-serif; /*used for fonts */
+    margin: 0;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.btn-primary{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    background-color: var(--orange);
+    padding: 20px 25px;
+    border: 0;
+    border-radius: 8px;
+    /* width: 180px; */
+}
+/*--------------------
+nav and banner styles 
+----------------------*/
+.header{
+    background-color: var(--bg_01);
+}
+.header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 102px;
+    margin-top: 50px;
+}
+.nav-title{
+    color: var(--Dark_01);
+    font-weight: 700;
+    font-size: 45px;
+}
+.nav-items{
+    display: flex;
+    color: var(--Dark_02);
+    font-weight: 500;
+    font-size: 18px;
+}
+.nav-items li{
+    margin-left: 25px;
+    list-style: none;
+}
+
+.banner-info{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.banner-title{
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--Dark_01);
+}
+.banner-description{
+    color: var(--Dark_03);
+    margin: 30px 0;
+}
+.banner-image{
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+.banner-image img{
+    width: 100%;
+}
+/*--------------- 
+quick list section styles 
+-----------------*/
+.quick-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quick-list-images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:24px;
+    
+}
+.quick-list-images {
+    width: 55%;
+}
+.quick-list-images img{
+    width: 100%;
+}
+.quick-list-info{
+    width: 37%;
+}
+.quick-list-title{
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--Dark_01);
+}
+.quick-list-title .title-1{
+    color: var(--Dark_03);
+    font-weight: 300;
+}
+.quick-list-title .title-2{
+    color: var(--orange);
+}
+.quick-list-description{
+    color: var(--Dark_03);
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+/*---------------------
+Features section styles 
+----------------------*/
+.features-container{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.features{
+    width: 45%;
+}
+.section-title{
+    border-left: 5px solid var(--orange);
+    padding-left: 21px;
+    color: var(--Dark_01);
+    font-weight: 700;
+    font-size: 45px;
+}
+.section-description{
+    color: var(--Dark_03);
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+.feature{
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 13px 5px rgba(0, 0, 0, 0.05);
+}
+.feature-title{
+    color: var(--Dark_01);
+    font-weight: 600;
+    font-size: 20px;
+}
+.feature-description{
+    color: var(--Dark_03);
+    margin-top: 10px;
+}
+.feature-images{
+    width: 50%;
+}

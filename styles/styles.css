@@ -2,12 +2,12 @@
 Custom variables 
 ----------------*/
 :root{
+    --primary_color:#FF900E;
     --bg_01:rgba(255, 144, 14, 0.1);
     --bg_02:#FFF4E7;
     --Dark_01:#131313;
     --Dark_02:#424242;
     --Dark_03:#727272;
-    --orange:#FF900E;
     --white:#FFFFFF;
 }
 /*----- 
@@ -24,8 +24,7 @@ Utilities
     margin: 0;
 }
 .container{
-    max-width: 900px;
-    margin: 0 auto;
+    margin: 0 10%;
     padding: 10px;
     margin-bottom: 130px;
     position: relative;
@@ -34,11 +33,21 @@ Utilities
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
-    background-color: var(--orange);
+    background-color: var(--primary_color);
     padding: 20px 25px;
     border: 0;
     border-radius: 8px;
     /* width: 180px; */
+}
+.section-title{
+    color: var(--Dark_01);
+    font-weight: 700;
+    font-size: 45px;
+}
+.section-description{
+    color: var(--Dark_03);
+    margin-top: 24px;
+    margin-bottom: 30px;
 }
 /*--------------------
 nav and banner styles 
@@ -123,7 +132,7 @@ quick list section styles
     font-weight: 300;
 }
 .quick-list-title .title-2{
-    color: var(--orange);
+    color: var(--primary_color);
 }
 .quick-list-description{
     color: var(--Dark_03);
@@ -141,18 +150,11 @@ Features section styles
 .features{
     width: 45%;
 }
-.section-title{
-    border-left: 5px solid var(--orange);
+.features-container .section-title{
+    border-left: 5px solid var(--primary_color);
     padding-left: 21px;
-    color: var(--Dark_01);
-    font-weight: 700;
-    font-size: 45px;
 }
-.section-description{
-    color: var(--Dark_03);
-    margin-top: 24px;
-    margin-bottom: 30px;
-}
+
 .feature{
     margin-bottom: 20px;
     padding: 30px;
@@ -188,8 +190,162 @@ Features section styles
     font-weight: 500;
     font-size: 25px;
 }
-
 .exp-button span{
     font-weight: 700;
     font-size: 65px;
+}
+/*----------------- 
+Facts section style 
+------------------*/
+.facts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    margin: 10% 5%;
+}
+.fact > div{
+    border: 1px solid var(--primary_color);
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px 15px;
+    transition: transform 1s;
+}
+.fact :hover{
+    transform: scale(1.2);
+}
+.fact-title{
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--Dark_02);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-description{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--Dark_03);
+}
+
+/*-------------------------
+Capabilities section styles 
+---------------------------*/
+.capabilites-container{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+.capabilites-container .info{
+    width: 30%;
+}
+.capabilities{
+    display: flex;
+    gap: 20px;
+}
+.capability{
+    width: 25%;
+    padding: 25px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 4px 13px 5px rgba(0, 0, 0, 0.05);
+}
+.fa-store, .fa-envelope, .fa-truck-fast{
+    color: var(--primary_color);
+}
+.capability-title{
+    color: var(--Dark_01);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.capability-description{
+    font-size: 15px;
+    color: var(--Dark_03);
+}
+/*--------------------
+Sponsors section styles 
+----------------------*/
+.sponsors-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sponsors-container .section-info{
+    text-align: center;
+    width: 50%;
+}
+.sponsors {
+    display: flex;
+    gap: 50px;
+}
+.sponsor img{
+    filter: grayscale(100%);
+}
+
+/*-------------
+footer styles 
+--------------*/
+.footer{
+    background-color: var(--bg_01);
+    text-align: center;
+    padding: 39px;
+}
+.footer-content{
+    font-size: 20px;
+    color: var(--Dark_02);
+}
+
+/*------------------------
+media query for responsive  
+--------------------------*/
+/* mobile devices */
+@media screen and (max-width:577px) {
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header nav, .nav-items, .quick-list, .capabilites-container, .capabilities, .sponsors{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header{
+        width: 100%;
+    }
+    .banner-title{
+        font-size: 45px;
+    }
+    .quick-list{
+        width: 100%;
+    }
+    .quick-list-images{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .features-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .features{
+        width: 100%;
+    }
+    .feature-images{
+        width: 100%;
+    }
+    .exp-button{
+        margin-top: 10px;
+        position: static;
+    }
+    .facts{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 40px;
+    }
+    .capabilites-container .info{
+        width: 90%;
+    }
+    .capability{
+        width: 90%;
+    }
+    .footer{
+        margin: 0 auto;
+    }
+    
 }
